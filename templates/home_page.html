@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      {% include 'header.html' %}
+      <h2>Provider Search</h2>
+        <hr>
+        <form action="searchresults" method="get">
+        <table>
+            <tr>
+            <td align="right">Provider Name:</td>
+            <td align="left"><input type="text" name="provider_name" value="{{provider_input}}"/></td>
+            </tr>
+            <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+        </form>
+        <strong>{{error_msg}}</strong>
+
+        {% include 'footer.html' %}
+
+      <!-- <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+      </script>
+      <script>
+         'use strict';
+         function handleResponse(response)
+         {
+            $('#resultsParagraph').html(response);
+         }
+         let request = null;
+         function getResults()
+         {
+            
+            let prof = $('#profInput').val();
+            prof = encodeURIComponent(prof);
+            let url = '/searchresults?prof=' + prof
+            if (request != null)
+               request.abort();
+            request = $.ajax(
+               {
+                  type: 'GET',
+                  url: url,
+                  success: handleResponse
+               }
+            );
+         }
+         function setup()
+         {
+            $('#profInput').on('input', getResults);
+         }
+         $('document').ready(setup);
+      </script> -->
+   </body>
+</html>

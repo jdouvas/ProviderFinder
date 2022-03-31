@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% include 'header.html' %}
+        <h2>Cost Estimate Questionnaire</h2>
+        <hr>
+        <form action="" method="get">
+        <table>
+            <tr>
+            <td align="right">Insurance Plan:</td>
+            <td align="left"><input type="text" name="insurance_plan" value="{{insurance_input}}"/></td>
+            </tr>
+            <tr>
+            <td align="right">Deductible:</td>
+            <td align="left"><input type="text" name="deduct" value="{{deduct_input}}"/></td>
+            </tr>
+
+            <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+        </form>
+        <hr>
+        <table>
+            <tr>
+            <th align="left">Cost estimate based on information provided</th>
+            </tr>
+            <tr>
+            <td>$1</td>
+            </tr>
+        </table>
+        
+        {% include 'footer.html' %}
+    </body>
+</html>
