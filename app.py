@@ -6,6 +6,7 @@
 from flask import Flask, request, make_response, redirect, url_for
 from flask import render_template, session
 from db_basic import search
+import logging
 #-----------------------------------------------------------------------
 
 app = Flask(__name__)
@@ -28,6 +29,9 @@ def home_page():
 
 @app.route('/searchresults', methods=['GET'])
 def search_results():
+
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)  
 
     provider = request.args.get('provider_name')
     # if (provider is None) or (provider.strip() == ''):
