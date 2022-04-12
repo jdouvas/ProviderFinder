@@ -1,0 +1,399 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Off-Campus Mental Health Providers in Princeton</title>
+{% endblock %}
+{% block content %}
+<div class="container-fluid"
+    style="background-color:#bec6e9; color:white">
+    <center>
+    <h1>Off-Campus Mental Health Providers in Princeton</h1>
+    </center>
+
+    <div class="row">
+    <div class="col-sm-12">
+        <input
+            class="form-control" type="text"
+            placeholder="Provider Name"
+            name="name" id="Name" autoFocus>
+    </div>
+    <div class="col-sm-6">
+        <input
+            class="form-control" type="text"
+            placeholder="Insurance"
+            name="insurance" id="Insurance"
+            list="insurances" multiple/>
+            <datalist id="insurances"> 
+                <option value="Princeton Student Health Plan"></option>
+                <option value="Aetna"></option>
+                <option value="AmeriHealth"></option>
+                <option value="Amerigroup"></option>
+                <option value="Anthem"></option>
+                <option value="APS Healthcare"></option>
+                <option value="Beacon Health Options"></option>
+                <option value="BHS | Behavioral Health Systems"></option>
+                <option value="Blue Cross"></option>
+                <option value="Blue Shield"></option>
+                <option value="BlueCross and BlueShield"></option>
+                <option value="Charles Nectum Assoc."></option>
+                <option value="Carebridge EAP"></option>
+                <option value="Ceridian"></option>
+                <option value="Cigna and Evernorth"></option>
+                <option value="ComPsych"></option>
+                <option value="Concern"></option>
+                <option value="Concern/Coresource"></option>
+                <option value="ChoiceCare Network"></option>
+                <option value="E4Health"></option>
+                <option value="EmblemHealth"></option>
+                <option value="Empire BlueCross BlueShield"></option>
+                <option value="Employee Assistance Program"></option>
+                <option value="ESI Employee Assistance Program"></option>
+                <option value="Employer Assisted Programs"></option>
+                <option value="Evernorth"></option>
+                <option value="Federal Employment Plan"></option>
+                <option value="First Choice Health | FCH"></option>
+                <option value="First Health"></option>
+                <option value="GEHA"></option>
+                <option value="Geisinger"></option>
+                <option value="GHI"></option>
+                <option value="Great-West Life"></option>
+                <option value="Guardian"></option>
+                <option value="Health Net"></option>
+                <option value="HealtSmart / World Trade Center Health Fund"></option>
+                <option value="Highmark"></option>
+                <option value="Horizon Blue Cross and Blue Shield"></option>
+                <option value="Horizon Blue Cross and Blue Shield of New Jersey (PPO)"></option>
+                <option value="Horizon PPO"></option>
+                <option value="Humana"></option>
+                <option value="I.E. Schaeffer"></option>
+                <option value="Independence Blue Cross"></option>
+                <option value="Keystone PPO"></option>
+                <option value="Konterra Group"></option>
+                <option value="LifeWorks | Morneau Shepell"></option>
+                <option value="Lifesolutions EAP"></option>
+                <option value="Lyra Health"></option>
+                <option value="Magellan"></option>
+                <option value="MagnaCare"></option>
+                <option value="Medicaid"></option>
+                <option value="Medicare"></option>
+                <option value="MHN | Health Net"></option>
+                <option value="Meridian"></option>
+                <option value="Merit"></option>
+                <option value="Military OneSource"></option>
+                <option value="MultiPlan"></option>
+                <option value="MVP Health Care"></option>
+                <option value="NewJersey Victims Of Crime Compensation"></option>
+                <option value="New Directions"></option>
+                <option value="NJ Direct Access"></option>
+                <option value="Omnia Tier 1"></option>
+                <option value="Optum"></option>
+                <option value="Oscar Health"></option>
+                <option value="Out of Network"></option>
+                <option value="Out-of-State BCBS"></option>
+                <option value="Oxford"></option>
+                <option value="PHCS Network"></option>
+                <option value="Penn Behavioral Health"></option>
+                <option value="Personal Injury Program"></option>
+                <option value="PIP"></option>
+                <option value="PsychCare"></option>
+                <option value="QualCare"></option>
+                <option value="St Barnabus Health"></option>
+                <option value="TRICARE"></option>
+                <option value="UHC"></option>
+                <option value="Ulliance EAP"></option>
+                <option value="UMR"></option>
+                <option value="UnitedHealthcare UHC | UBH"></option>
+                <option value="Wellchoice"></option>
+                <option value="Wellspring EAP"></option>
+                <option value="Workers Compensation"></option>
+                <option value="Workman's Comp"></option>
+                <option value="Workplace Options"></option>
+                <option value="1199SEIU"></option>
+            </datalist>
+    </div>
+    <div class="col-sm-3">
+        <input
+            class="form-control" type="text"
+            placeholder="Specialties"
+            name="specialties" id="Specialties"
+            list="specialt_issues" multiple>
+            <datalist id="specialt_issues">
+                <option value="Anxiety"></option>
+                <option value="Depression"></option>
+                <option value="Trauma and PTSD"></option>
+                <option value="Bipolar Disorder"></option>
+                <option value="Divorce"></option>
+                <option value="Alcohol Use"></option>
+                <option value="Addiction"></option>
+                <option value="Domestic Abuse"></option>
+                <option value="Body Image Issues"></option>
+                <option value="Chronic Illness"></option>
+                <option value="Chronic Pain"></option>
+                <option value="Drug Abuse"></option>
+                <option value="Eating Disorders"></option>
+            </datalist>
+    </div>
+    <div class="col-sm-3">
+        <input
+            class="form-control" type="text"
+            placeholder="Therapies Offered"
+            name="therapies" id="Therapies"
+            list="therapy" multiple>
+            <datalist id="therapy">
+                <option value="Cognitive Behavioral (CBT)"></option>
+                <option value="Dialectical (DBT)"></option>
+                <option value="Trauma-Focused"></option>
+                <option value="Attachment-based"></option>
+                <option value="Mindfulness-Based"></option>
+                <option value="EMDR"></option>
+            </datalist>
+    </div>
+    <div class="col-sm-2">
+        <input
+            class="form-control" type="text"
+            placeholder="Credentials"
+            name="titles" id="Titles"
+            list="title" multiple>
+            <datalist id="title">
+                <option value="Psychiatrist"></option>
+                <option value="Psychiatric Nurse Practitioner"></option>
+                <option value="Physician Assistant"></option>
+                <option value="Psychologist"></option>
+                <option value="Clinical Social Work/Therapist"></option>
+                <option value="Licensed Professional Counselor"></option>
+                <option value="Marriage & Family Therapist"></option>
+                <option value="Drug & Alcohol Counselor"></option>
+                <option value="Counselor"></option>
+                <option value="Art Therapist"></option>
+                <option value="Pastoral Counselor/Therapist"></option>
+                <option value="Pre-Licensed Professional"></option>
+            </datalist>
+    </div>
+    <div class="col-sm-2">
+        <input
+            class="form-control" type="text"
+            placeholder="Degrees"
+            name="degrees" id="Degrees"
+            list="degree" multiple>
+            <datalist id="degree">
+                <option value="AACC"></option>
+                <option value="AAMFT"></option>
+                <option value="ABAM"></option>
+                <option value="ABPP"></option>
+                <option value="ACS"></option>
+                <option value="ACST"></option>
+                <option value="APN"></option>
+                <option value="APRN"></option>
+                <option value="ATCS"></option>
+                <option value="ATR- BC"></option>
+                <option value="ATR-BC"></option>
+                <option value="BCBA"></option>
+                <option value="B-C"></option>
+                <option value="BC"></option>
+                <option value="BCC"></option>
+                <option value="BCD"></option>
+                <option value="CADC"></option>
+                <option value="CAMS"></option>
+                <option value="CCATP"></option>
+                <option value="CCPT"></option>
+                <option value="CCTP"></option>
+                <option value="CEAP"></option>
+                <option value="CEDS"></option>
+                <option value="CHHC"></option>
+                <option value="CIMHP"></option> 
+                <option value="CPS"></option>
+                <option value="CRNP"></option>   
+                <option value="CRS"></option>
+                <option value="CSAT"></option>
+                <option value="CSSW"></option>
+                <option value="CSTS"></option>
+                <option value="C-MFT"></option>
+                <option value="DAPA"></option>
+                <option value="DCSW"></option>
+                <option value="DFAPA"></option>
+                <option value="DMinc"></option>
+                <option value="DNP"></option>
+                <option value="DO"></option>
+                <option value="DrNP"></option>
+                <option value="DSW"></option>
+                <option value="EdD"></option>
+                <option value="EdS"></option>
+                <option value="ES"></option>
+                <option value="IBCC"></option>
+                <option value="IMHF"></option>
+                <option value="LAC"></option>
+                <option value="LAMFT"></option>
+                <option value="LCSW"></option>
+                <option value="LCSW-R"></option>
+                <option value="LCSW-C"></option>
+                <option value="LCADC"></option>
+                <option value="LDTC"></option>
+                <option value="LMFT"></option>
+                <option value="LMHC"></option>
+                <option value="LPAT"></option>
+                <option value="LPC"></option>
+                <option value="LP"></option>
+                <option value="LSW"></option>
+                <option value="MA"></option>
+                <option value="MAC"></option>
+                <option value="MD"></option>
+                <option value="MDiv"></option>
+                <option value="MEd"></option>
+                <option value="MFT"></option>
+                <option value="MPH"></option>
+                <option value="MS"></option>
+                <option value="MSOD"></option>
+                <option value="MSN"></option>
+                <option value="MSS"></option>
+                <option value="MSSW"></option>
+                <option value="MSW"></option>
+                <option value="MT-BC"></option>
+                <option value="NCC"></option>
+                <option value="NCSP"></option>
+                <option value="NTP"></option>
+                <option value="PA-C"></option> 
+                <option value="PCC"></option>
+                <option value="PhD"></option>
+                <option value="PMHNP"></option>
+                <option value="PMHNP-B"></option>
+                <option value="PMHNPBC"></option>
+                <option value="PHM-C"></option>
+                <option value="PsyD"></option>
+                <option value="RYT"></option>
+                <option value="SAC"></option>
+                <option value="SD"></option>
+            </datalist>
+    </div>
+    <div class="col-sm-2">
+        <input
+            class="form-control" type="text"
+            placeholder="Pay-By"
+            name="payby" id="Pay_By"
+            list="paybys" multiple>
+            <datalist id="paybys">
+                <option value="American Express"></option>
+                <option value="Cash"></option>
+                <option value="Check"></option>
+                <option value="Discover"></option>
+                <option value="Health Savings Account"></option>
+                <option value="Mastercard"></option>
+                <option value="PayPal"></option>
+                <option value="Venmo"></option>
+                <option value="Visa"></option>
+                <option value="Wire"></option>
+                <option value="ACH Bank Transfer"></option>
+            </datalist>
+    </div>
+    <div class="col-sm-2">
+        <input
+            class="form-control" type="text"
+            placeholder="Allied With"
+            name="allied" id="Allied"
+            list="ally" multiple>
+            <datalist id="ally">
+                <option value="Bisexual"></option>
+                <option value="LGBTQ+"></option>
+                <option value="Lesbian"></option>
+            </datalist>
+    </div>
+    <div class="col-sm-2">
+        <input
+            type="checkbox"
+            name="telehealth" id="Telehealth" unchecked>
+        <label style="font-size:20px" for="telehealth">Offers telehealth</label>
+    </div>
+    <div class="col-sm-2">
+        <input
+            type="checkbox"
+            name="walkable" id="Walkable" unchecked>
+        <label style="font-size:12px" for="walkable">Walkable/bikable from campus</label>
+    </div>
+    </div>
+    <br>
+</div>
+<div class="container-fluid" id="SearchResults"></div>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+
+<script>
+    'use strict';
+
+    function handleResponse(response)
+    {
+        $('#SearchResults').html(response); // response returned from app.py
+    }
+
+    var request = null;
+
+    function getResults()
+    {
+        let name = $('#Name').val();
+        let insurance = $('#Insurance').val();
+        let pay_by = $('#Pay_By').val();
+        let specialties = $('#Specialties').val();
+        let allied = $('#Allied').val();
+        let therapies = $('#Therapies').val();
+        let titles = $('#Titles').val();
+        let degrees = $('#Degrees').val();
+        let isCheckedTele = $('#Telehealth').is(':checked');
+        var telehealth;
+        (isCheckedTele) ? (telehealth = 'Y'): telehealth = ''
+        let isCheckedWalk = $('#Walkable').is(':checked');
+        var walkable;
+        (isCheckedWalk) ? (walkable = 'Y'): walkable = ''
+
+
+        name = encodeURIComponent(name);
+        insurance = encodeURIComponent(insurance);
+        pay_by = encodeURIComponent(pay_by);
+        specialties = encodeURIComponent(specialties);
+        allied = encodeURIComponent(allied);
+        therapies = encodeURIComponent(therapies);
+        titles = encodeURIComponent(titles);
+        telehealth = encodeURIComponent(telehealth);
+        degrees = encodeURIComponent(degrees);
+        walkable = encodeURIComponent(walkable);
+
+        let url = '/searchresults' + 
+            '?name=' + name + 
+            '&insurance=' + insurance +
+            '&payby=' + pay_by +
+            '&specialties=' + specialties +
+            '&allied=' + allied +
+            '&therapies=' + therapies + 
+            '&titles=' + titles +
+            '&telehealth=' + telehealth +
+            '&degrees=' + degrees +
+            '&walkable=' + walkable;
+
+        if (request != null)
+            request.abort();
+
+        request = $.ajax(
+            {
+                type: 'GET',
+                url: url,
+                success: handleResponse
+            }
+        );
+    }
+
+    function setup()
+    {
+        $('#Name').on('input', getResults);
+        $('#Insurance').on('input', getResults);
+        $('#Pay_By').on('input', getResults);
+        $('#Specialties').on('input', getResults);
+        $('#Allied').on('input', getResults);
+        $('#Therapies').on('input', getResults);
+        $('#Titles').on('input', getResults);
+        $('#Telehealth').on('click', getResults);
+        $('#Walkable').on('click', getResults);
+        $('#Degrees').on('input', getResults);
+        getResults();
+    }
+
+    $('document').ready(setup);
+</script>
+
+{% endblock %}
