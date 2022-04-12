@@ -14,20 +14,56 @@ app = Flask(__name__)
 
 #-----------------------------------------------------------------------
 
-
-# def real_home_page():
-
-#     html = render_template('homepage.html')
-#     response = make_response(html)
-#     return response
-
-#-----------------------------------------------------------------------
 @app.route('/', methods=['GET'])
 @app.route('/homepage', methods=['GET'])
 def home_page():
 
-    # html = render_template('search.html')
     html = render_template('homepage.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
+@app.route('/oncampusresources', methods=['GET'])
+def on_campus_resources():
+
+    html = render_template('oncampusresources.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
+@app.route('/princetonstudentplan', methods=['GET'])
+def pu_student_plan():
+
+    html = render_template('princetonstudentplan.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
+@app.route('/mentalhealthcarebasics', methods=['GET'])
+def mental_healthcare_basics():
+
+    html = render_template('mentalhealthcarebasics.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
+@app.route('/faq', methods=['GET'])
+def faq():
+
+    html = render_template('faq.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
+@app.route('/offcampusproviderfinder', methods=['GET'])
+def provider_finder():
+
+    html = render_template('search.html')
     response = make_response(html)
     return response
 
@@ -107,10 +143,8 @@ def search_results():
         html += ('<tr><td><a target="_blank" href='+ str(line[1]) + '>' + str(line[0]) + '</a></td>')
         html += '<td>' + str(line[2]) + '</td></tr>'
     html += '</table>'
-
     print(count)
     response = make_response(html)
     return response
-
 
 #-----------------------------------------------------------------------
