@@ -171,7 +171,7 @@ def search(search_dict, student_health):
     degrees = '%'+degrees+'%'
     params['degrees'] = degrees
 
-    sqlstring = 'SELECT name, url, phone_number FROM providers_moreinfo'
+    sqlstring = 'SELECT name, url, phone_number FROM providers'
     b_name = False
     b_telehealth = False
     b_walkable = False
@@ -189,88 +189,88 @@ def search(search_dict, student_health):
     
     if name != '%%':
         b_name = True
-        sqlstring += ' LOWER(providers_moreinfo.name) LIKE LOWER(%(name)s)'
+        sqlstring += ' LOWER(providers.name) LIKE LOWER(%(name)s)'
     if telehealth != '%%':
         b_telehealth = True
         if b_name is True:
             sqlstring += ' AND'
-        sqlstring += ' LOWER(providers_moreinfo.telehealth_option) LIKE LOWER(%(telehealth)s)'
+        sqlstring += ' LOWER(providers.telehealth_option) LIKE LOWER(%(telehealth)s)'
     if payby != '%%':
         b_payby = True
         if b_name is True or b_telehealth is True:
             sqlstring += ' AND'
-        sqlstring += ' array_to_string(providers_moreinfo.pay_by, \',\') LIKE %(payby)s'
+        sqlstring += ' array_to_string(providers.pay_by, \',\') LIKE %(payby)s'
     if specialties != '%%':
         b_specialties = True
         if b_name is True or b_telehealth is True or b_payby is True:
             sqlstring += ' AND'
-        sqlstring += ' array_to_string(providers_moreinfo.specialties_issues, \',\') LIKE %(specialties)s'
+        sqlstring += ' array_to_string(providers.specialties_issues, \',\') LIKE %(specialties)s'
     if allied != '%%':
         b_allied = True
         if b_name is True or b_telehealth is True or b_payby is True or b_specialties is True:
             sqlstring += ' AND'
-        sqlstring += ' array_to_string(providers_moreinfo.sexuality, \',\') LIKE %(allied)s'
+        sqlstring += ' array_to_string(providers.sexuality, \',\') LIKE %(allied)s'
     if therapies != '%%':
         b_therapies = True
         if b_name is True or b_telehealth is True or b_payby is True or b_specialties is True or b_allied is True:
             sqlstring += ' AND'
-        sqlstring += ' array_to_string(providers_moreinfo.therapies_offered, \',\') LIKE %(therapies)s'
+        sqlstring += ' array_to_string(providers.therapies_offered, \',\') LIKE %(therapies)s'
     if titles != '%%':
         b_titles = True
         if b_name is True or b_telehealth is True or b_payby is True or b_specialties is True or b_allied is True or b_therapies is True:
             sqlstring += ' AND'
-        sqlstring += ' array_to_string(providers_moreinfo.titles, \',\') LIKE %(titles)s'
+        sqlstring += ' array_to_string(providers.titles, \',\') LIKE %(titles)s'
     if degrees != '%%':
         b_degrees = True
         if b_name is True or b_telehealth is True or b_payby is True or b_specialties is True or b_allied is True or b_therapies is True or b_titles is True:
             sqlstring += ' AND'
-        sqlstring += ' array_to_string(providers_moreinfo.titles, \',\') LIKE %(degrees)s'
+        sqlstring += ' array_to_string(providers.titles, \',\') LIKE %(degrees)s'
     if insurance != '%%':
         b_insurances = True
         if b_name is True or b_telehealth is True or b_payby is True or b_specialties is True or b_allied is True or b_therapies is True or b_titles is True or b_degrees is True:
             sqlstring += ' AND'
         if (student_health):
-            sqlstring += ' (array_to_string(providers_moreinfo.insurances, \',\') LIKE %(insurance)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias1)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias2)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias3)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias4)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias5)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias6)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias7)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias8)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias9)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias10)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias11)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias12)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias13)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias14)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias15)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias16)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias17)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias18)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias19)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias20)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias21)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias22)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias23)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias24)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias25)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias26)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias27)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias28)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias29)s OR \
-                            array_to_string(providers_moreinfo.insurances, \',\') LIKE %(alias30)s)'
+            sqlstring += ' (array_to_string(providers.insurances, \',\') LIKE %(insurance)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias1)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias2)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias3)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias4)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias5)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias6)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias7)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias8)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias9)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias10)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias11)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias12)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias13)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias14)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias15)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias16)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias17)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias18)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias19)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias20)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias21)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias22)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias23)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias24)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias25)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias26)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias27)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias28)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias29)s OR \
+                            array_to_string(providers.insurances, \',\') LIKE %(alias30)s)'
         else:
-            sqlstring += ' (array_to_string(providers_moreinfo.insurances, \',\') LIKE %(insurance)s)'
+            sqlstring += ' (array_to_string(providers.insurances, \',\') LIKE %(insurance)s)'
     if walkable != '%%':
         b_walkable = True
         if b_name is True or b_telehealth is True or b_payby is True or b_specialties is True or b_allied is True or b_therapies is True or b_titles is True or b_insurances is True:
             sqlstring += ' AND'
-        sqlstring += ' LOWER(providers_moreinfo.walkable) LIKE LOWER(%(walkable)s)'
+        sqlstring += ' LOWER(providers.walkable) LIKE LOWER(%(walkable)s)'
     
 
-    sqlstring += ' ORDER BY providers_moreinfo.name;'
+    sqlstring += ' ORDER BY providers.name;'
     cur.execute(sqlstring, params)
     results = cur.fetchall()
     conn.commit()
