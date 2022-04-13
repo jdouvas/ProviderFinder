@@ -87,6 +87,7 @@ def commontherapytechniques():
 
 #-----------------------------------------------------------------------
 
+
 @app.route('/typesofproviders', methods=['GET'])
 def typesofproviders():
 
@@ -177,7 +178,10 @@ def search_results():
     for line in search_results:
         count += 1
         html += ('<tr><td><a target="_blank" href='+ str(line[1]) + '>' + str(line[0]) + '</a></td>')
-        html += '<td><a href="tel:{{line[2]}}">' + str(line[2]) + '</a></td></tr>'
+        if line[2] == 'None':
+            html += '<td>' + str(line[2]) + '</td></tr>'
+        else:
+            html += '<td><a href="tel:{{line[2]}}">' + str(line[2]) + '</a></td></tr>'
     html += '</table>'
     print(count)
     response = make_response(html)
