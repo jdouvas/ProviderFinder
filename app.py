@@ -183,7 +183,6 @@ def search_results():
         else:
             html += '<td><a href="tel:' + str(line[2]) + '\">' + str(line[2]) + '</a></td></tr>'
     html += '</table>'
-    print(count)
     response = make_response(html)
     return response
 
