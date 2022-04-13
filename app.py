@@ -181,7 +181,7 @@ def search_results():
         if str(line[2]) == 'None':
             html += '<td>' + str(line[2]) + '</td></tr>'
         else:
-            html += '<td><a href="tel:line[2]">' + str(line[2]) + '</a></td></tr>'
+            html += '<td><a href="tel:' + str(line[2]) + '\">' + str(line[2]) + '</a></td></tr>'
     html += '</table>'
     print(count)
     response = make_response(html)
