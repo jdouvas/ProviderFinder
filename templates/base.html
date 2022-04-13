@@ -13,15 +13,15 @@
     <body>
 
         <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-
+          <div class="container-fluid">
             <a class="navbar-brand" href="/homepage">ProviderFinder</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
                   <a class="nav-link" href="/oncampusresources">On-Campus Resources</a>
                 </li>
                 <li class="nav-item">
@@ -29,22 +29,31 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/princetonstudentplan">Information on Princeton Student Health Plan</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/mentalhealthcarebasics">Mental Healthcare Resource Guide</a>
+                </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/mentalhealthcarebasics">Mental Healthcare Resource Guide</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                      <a class="dropdown-item" href="/overviewushealth">Overview of US Healthcare System & Definitions</a>
+                      <a class="dropdown-item" href="/commontherapytechniques">Common Therapy Techniques</a>
+                      <a class="dropdown-item" href="/typesofproviders">Common Types of Mental Healthcare Providers</a>
+                    </div>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/faq">FAQ</a>
                   </li>
               </ul>
             </div>
-          </nav>
+          </div>
+        </nav>
 
         {% block content %}
         {% endblock %}
 
+        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
             <a class="navbar-brand">Created by Julia Douvas '23</a>
+          </div>
         </nav>
     </body>
 </html>

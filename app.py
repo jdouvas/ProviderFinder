@@ -60,6 +60,33 @@ def faq():
 
 #-----------------------------------------------------------------------
 
+@app.route('/overviewushealth', methods=['GET'])
+def overview_ushealthcare():
+
+    html = render_template('overview_ushealthcare.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
+@app.route('/commontherapytechniques', methods=['GET'])
+def commontherapytechniques():
+
+    html = render_template('common_therapies.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
+@app.route('/typesofproviders', methods=['GET'])
+def typesofproviders():
+
+    html = render_template('common_providers.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
 @app.route('/offcampusproviderfinder', methods=['GET'])
 def provider_finder():
 
