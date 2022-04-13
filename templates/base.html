@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark visible-desktop navbar-fixed-top">
           <div class="container-fluid">
             <a class="navbar-brand" href="/homepage">ProviderFinder</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,13 +50,17 @@
               </ul>
           </div>
         </nav>
+
+        <div class="container-fluid" style="background-color:#e2a188;">
+          <br>
+          <br>
+          <br>
+        </div>
         
         {% block content %}
         {% endblock %}
 
-        <br>
-        <br>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark visible-desktop">
           <div class="container-fluid">
             <a class="navbar-brand">Created by Julia Douvas '23</a>
           </div>
