@@ -302,7 +302,10 @@
     <div class="col-sm-2">
         <label style="font-size:18px"><input type="checkbox" name="walkable" id="Walkable" unchecked> Walkable/Bikeable from Campus</label>
     </div>
-    <div>*Data for this search engine was obtained from the PsychologyToday website. Not all off-campus providers may be listed.</div>
+    <div class="col-sm-2">
+        <button id="Clear" type="button" class="btn btn-dark">Clear search</button>
+    </div>
+    <div class="text-right col-sm-10">*Data for this search engine was obtained from the PsychologyToday website. Not all off-campus providers may be listed.</div>
     </div>
     <br>
 </div>
@@ -374,6 +377,7 @@
         );
     }
 
+
     function setup()
     {
         $('#Name').on('input', getResults);
@@ -386,6 +390,19 @@
         $('#Telehealth').on('click', getResults);
         $('#Walkable').on('click', getResults);
         $('#Degrees').on('input', getResults);
+        $("#Clear").click(function(){
+            $('#Name').val('');
+            $('#Insurance').val('');
+            $('#Pay_By').val('');
+            $('#Specialties').val('');
+            $('#Allied').val('');
+            $('#Therapies').val('');
+            $('#Titles').val('');
+            $('#Telehealth').prop('checked', false);
+            $('#Walkable').prop('checked', false);
+            $('#Degrees').val('');
+            getResults();
+        });
         getResults();
     }
 
