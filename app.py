@@ -31,52 +31,52 @@ def on_campus_resources():
     response = make_response(html)
     return response
 
-#-----------------------------------------------------------------------
+# #-----------------------------------------------------------------------
 
-@app.route('/princetonstudentplan', methods=['GET'])
-def pu_student_plan():
+# @app.route('/princetonstudentplan', methods=['GET'])
+# def pu_student_plan():
 
-    html = render_template('princetonstudentplan.html')
-    response = make_response(html)
-    return response
+#     html = render_template('princetonstudentplan.html')
+#     response = make_response(html)
+#     return response
 
-#-----------------------------------------------------------------------
+# #-----------------------------------------------------------------------
 
-@app.route('/mentalhealthcarebasics', methods=['GET'])
-def mental_healthcare_basics():
+# @app.route('/mentalhealthcarebasics', methods=['GET'])
+# def mental_healthcare_basics():
 
-    html = render_template('mentalhealthcarebasics.html')
-    response = make_response(html)
-    return response
+#     html = render_template('mentalhealthcarebasics.html')
+#     response = make_response(html)
+#     return response
 
-#-----------------------------------------------------------------------
+# #-----------------------------------------------------------------------
 
-@app.route('/faq', methods=['GET'])
-def faq():
+# @app.route('/faq', methods=['GET'])
+# def faq():
 
-    html = render_template('faq.html')
-    response = make_response(html)
-    return response
+#     html = render_template('faq.html')
+#     response = make_response(html)
+#     return response
 
-#-----------------------------------------------------------------------
+# #-----------------------------------------------------------------------
 
-@app.route('/moreresources', methods=['GET'])
-def moreresources():
+# @app.route('/moreresources', methods=['GET'])
+# def moreresources():
 
-    html = render_template('moreresources.html')
-    response = make_response(html)
-    return response
+#     html = render_template('moreresources.html')
+#     response = make_response(html)
+#     return response
 
-#-----------------------------------------------------------------------
+# #-----------------------------------------------------------------------
 
-@app.route('/overviewushealth', methods=['GET'])
-def overview_ushealthcare():
+# @app.route('/overviewushealth', methods=['GET'])
+# def overview_ushealthcare():
 
-    html = render_template('overview_ushealthcare.html')
-    response = make_response(html)
-    return response
+#     html = render_template('overview_ushealthcare.html')
+#     response = make_response(html)
+#     return response
 
-#-----------------------------------------------------------------------
+# #-----------------------------------------------------------------------
 
 @app.route('/commontherapytechniques', methods=['GET'])
 def commontherapytechniques():
