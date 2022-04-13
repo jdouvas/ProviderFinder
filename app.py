@@ -60,6 +60,15 @@ def faq():
 
 #-----------------------------------------------------------------------
 
+@app.route('/moreresources', methods=['GET'])
+def moreresources():
+
+    html = render_template('moreresources.html')
+    response = make_response(html)
+    return response
+
+#-----------------------------------------------------------------------
+
 @app.route('/overviewushealth', methods=['GET'])
 def overview_ushealthcare():
 
