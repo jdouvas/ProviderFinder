@@ -24,6 +24,14 @@ def home_page():
 
 #-----------------------------------------------------------------------
 
+@app.route('/flowchart', methods=['GET'])
+def flowchart():
+    html = render_template('flowchart.html')
+    response = make_response(html)
+    return response
+
+# #-----------------------------------------------------------------------
+
 @app.route('/oncampusresources', methods=['GET'])
 def on_campus_resources():
 

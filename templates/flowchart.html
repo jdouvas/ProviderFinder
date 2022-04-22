@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid" style="background-color:#9779bd; color: white">
+<div class="container-fluid">
+    <h1>Flowchart of Supportive Resources for Princeton Students</h1>
+    <text>*Options that involve (or could potentially involve) being in contact with other Princeton students</text>
+    <br>
+    <br>
+</div>
+</div>
+
+<div class="container-fluid">
+    <div class="col-xs-12">
+        <hr>
+        <!-- flowchart -->
+        <br>
+        <!-- first level text box -->
+        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 20px">I would like to seek out confidential or private support</p>
+        <!-- first set of arrows -->
+        <div class="row">
+            <div class="col-xs-6 text-center">
+            <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
+            </div>
+            <div class="col-xs-6 text-center">
+            <p class="btn">
+                <span class="glyphicon glyphicon-arrow-down"></span></p>
+            </div>
+        </div>
+        <!-- second level -->
+        <div class="row">
+            <!-- option on left -->
+            <div class="col-xs-6 text-center">
+                <!-- description -->
+                <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 17px">I would confidential professional counseling from licensed mental healthcare providers</p>
+                <!-- arrows -->
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                    <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                    <p class="btn">
+                        <span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                </div>
+                <!-- third level on left -->
+                <div class="row">
+                    <!-- option on left -->
+                    <div class="col-xs-6 text-center">
+                        <!-- description -->
+                        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 15px">I would like to explore free, on-campus options</p>
+                        <!-- arrows -->
+                        <div class="row">
+                            <div class="col-xs-6 text-center">
+                                <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                <!-- CPS -->
+                                <button type="button" class="btn btn-warning btn-lg btn-block" style="text-decoration: none; color: white; white-space: normal;" onclick="window.location.href='/oncampusresources#CPS-content'">CPS</button>
+                            </div>
+                            <div class="col-xs-6 text-center">
+                                <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                <div class="row">
+                                    <!-- option on right -->
+                                    <div class="col-xs-12 text-center">
+                                        <!-- description -->
+                                        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 10px">I would like support related to experiences of interpersonal violence, including sexual harassment, sexual assault, domestic/dating violence, and stalking</p>
+                                        <!-- arrows -->
+                                        <div class="row">
+                                            <div class="col-xs-12 text-center">
+                                                <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                                <!-- SHARE -->
+                                                <button type="button" class="btn btn-warning btn-lg btn-block" style="text-decoration: none; color: white; white-space: normal;" onclick="window.location.href='/oncampusresources#SHARE-content'">SHARE</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- option on right -->
+                    <div class="col-xs-6 text-center">
+                        <!-- description -->
+                        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 15px">I would like to explore off-campus options</p>
+                        <!-- arrows -->
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                    <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                    <!-- Off-Campus Provider Search -->
+                                    <button type="button" class="btn btn-primary btn-lg btn-block" style="text-decoration: none; color: white; white-space: normal;" onclick="window.location.href='/offcampusproviderfinder'">Off-Campus Provider Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- option on right -->
+            <div class="col-xs-6 text-center">
+                <!-- description -->
+                <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 17px">I am ok speaking with a trained individual who is not necessarily a licensed mental healthcare professional. I am looking for someone to empathetically listen and provide options for professional support.</p>
+                <!-- arrows -->
+                <div class="row">
+                    <div class="col-xs-9 text-center">
+                    <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                    <p class="btn">
+                        <span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                </div>
+                <!-- third level on right -->
+                <div class="row">
+                    <!-- option on left -->
+                    <div class="col-xs-9 text-center">
+                        <!-- description -->
+                        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 17px">I want to speak to a Princeton-specific resource</p>
+                        <div class="row">
+                            <!-- arrows -->
+                            <div class="col-xs-4 text-center">
+                            <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                            <p class="btn">
+                                <span class="glyphicon glyphicon-arrow-down"></span></p>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <p class="btn">
+                                    <span class="glyphicon glyphicon-arrow-down"></span></p>
+                            </div>
+                            <!-- new level -->
+                            <div class="col-xs-12 text-center">
+                                <div class="row">
+                                    <!-- option on left -->
+                                    <div class="col-xs-4 text-center">
+                                        <!-- description -->
+                                        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 10px">I would like an immediate call/text option</p>
+                                        <div class="row">
+                                            <!-- arrows -->
+                                            <div class="col-xs-12 text-center">
+                                                <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                                <!-- PPN -->
+                                                <button type="button" class="btn btn-warning btn-lg btn-block" style="text-decoration: none; color: white; white-space: normal;" onclick="window.location.href='/oncampusresources#PPN-content'">PPN*</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- option in midde -->
+                                    <div class="col-xs-4 text-center">
+                                        <!-- description -->
+                                        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 10px">I would like a support option aligned with my faith and/or I would like religious counseling</p>
+                                        <div class="row">
+                                            <!-- arrows -->
+                                            <div class="col-xs-12 text-center">
+                                                <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                                <!-- ORL -->
+                                                <button type="button" class="btn btn-warning btn-lg btn-block" style="text-decoration: none; color: white; white-space: normal;" onclick="window.location.href='/oncampusresources#ORL-content'">ORL</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- option on right -->
+                                    <div class="col-xs-4 text-center">
+                                        <!-- description -->
+                                        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 10px">I would like to support related to experiences of interpersonal harm</p>
+                                        <div class="row">
+                                            <!-- arrows -->
+                                            <div class="col-xs-12 text-center">
+                                                <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                                <!-- SHARE Peers -->
+                                                <button type="button" class="btn btn-warning btn-lg btn-block" style="text-decoration: none; color: white; white-space: normal;" onclick="window.location.href='/oncampusresources#SHARE-Peer-content'">SHARE Peers*</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- option on right -->
+                    <div class="col-xs-3 text-center">
+                        <!-- description -->
+                        <p class="text-center p-3 mb-2 bg-secondary center-block" style="color: white; font-size: 15px">I am ok speaking with a non-Princeton resource</p>
+                        <!-- arrows -->
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                <!-- CONTACT -->
+                                <button type="button" class="btn btn-primary btn-lg btn-block" style="text-decoration: none; color: white; white-space: normal;" onclick="window.location.href='/oncampusresources#CONTACT-content'">CONTACT*</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+{% endblock %}
